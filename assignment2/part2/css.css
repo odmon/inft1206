@@ -1,12 +1,14 @@
 html {
-  font-family: sans-serif;
+  font-family: Tahoma;
+  font-size: 20px;
 }
 
 table {
   border-collapse: collapse;
   border: 2px solid rgb(200,200,200);
   letter-spacing: 1px;
-  font-size: 0.8rem;
+  font-size: 1rem;
+
 }
 
 td, th {
@@ -32,4 +34,5 @@ tr:nth-child(odd) td {
 
 caption {
   padding: 8px;
+  font-size: 10px;
 }
