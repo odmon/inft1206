@@ -6,15 +6,16 @@ html {
 
 div {
  
-  border: 3px solid ;   /* box */
-  padding: .5em;
 
   
   width: 200px;  /*widht 200*/
 
-  height: 100px; /*height 100*/
 
-  text-align: center;
+
+  text-align: center;  /*center horizontally*/
+
+  border: 5px solid;   /*center vertically*/
+  padding: 50px 0;
 
 
     };
