@@ -1,5 +1,12 @@
 /* General setup */
 
+@font-face {
+  font-family: 'kurland';
+  src: url('fonts/kurland.ttf') format('tty'),
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
 }
