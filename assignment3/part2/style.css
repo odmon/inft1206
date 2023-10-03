@@ -13,9 +13,7 @@ div {
 
 
   text-align: center;  /*center horizontally*/
-
-  border: 5px solid;   /*center vertically*/
-  padding: 50px 0;
+  padding: 50px 0;  /*center vertically*/
 
   font-size: 1.125rem;  /*increate font size 18px = 1.125rem*/
 
@@ -24,5 +22,6 @@ div {
 
   text-shadow: 1px 1px black; /*text shadow*/
 
-  border-radius: 5px; /*border radius*/
+  border-radius: 20px; /*border radius*/
+  border: 1px solid #4d0391 /*darker blueviolet color for the border*/
     };
