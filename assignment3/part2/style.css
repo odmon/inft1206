@@ -1,5 +1,5 @@
 html {
-  font-family: sans-serif;
+  font-family: Tahoma;
 }
 
 /* Your CSS below here */
@@ -17,5 +17,11 @@ div {
   border: 5px solid;   /*center vertically*/
   padding: 50px 0;
 
+  font-size: 1.125rem;  /*increate font size 18px = 1.125rem*/
+
+  background-color: yellow;  /*background color */
+  color: blueviolet;  /*font and border color*/
+
+  text-shadow: 1px 1px black; /*text shadow*/
 
     };
