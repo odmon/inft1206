@@ -52,7 +52,9 @@ footer {
   clear: both;
 }
 
-header{
+
+/*header font*/
+header,h1,h2{
 font-family: 'wantcoffee';
 }
 
