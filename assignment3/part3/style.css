@@ -1,11 +1,18 @@
 /* General setup */
 
-@font-face {
+/*add font kurland*/
+@font-face {  
   font-family: 'kurland';
-  src: url('fonts/kurland.ttf') format('tty'),
-  font-weight: normal;
-  font-style: normal;
+  src: url('fonts/kurland.ttf') format('TrueType'),
 }
+
+
+/*add font ryderdirty*/
+@font-face {  
+  font-family: 'ryderdirty';
+  src: url('fonts/ryderdirty.ttf') format('TrueType'),
+}
+
 
 * {
   box-sizing: border-box;
