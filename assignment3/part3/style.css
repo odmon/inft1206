@@ -1,23 +1,7 @@
 /* General setup */
 
-/*add font kurland*/
-@font-face {  
-  font-family: 'kurland';
-  src: url('fonts/kurland.ttf') format('TrueType'),
-}
 
 
-/*add font ryderdirty*/
-@font-face {  
-  font-family: 'wantcoffee';
-  src: url('fonts/wantcoffee.ttf') format('TrueType'),
-}
-
-
-/*font size 10px*/
-html {
-  font-size: 10px;
-}
 
 * {
   box-sizing: border-box;
@@ -53,10 +37,6 @@ footer {
 }
 
 
-/*header font*/
-header,h1,h2{
-font-family: 'wantcoffee';
-}
 
 header, section, aside, nav, footer {
 
@@ -70,4 +50,45 @@ header, footer {
   border-bottom: 5px solid #a66;
 }
 
+
+
 /* WRITE YOUR CODE BELOW HERE */
+
+/*add font kurland*/
+@font-face {  
+  font-family: 'kurland';
+  src: url('fonts/kurland.ttf') format('TrueType'),
+}
+
+
+/*add font ryderdirty*/
+@font-face {  
+  font-family: 'wantcoffee';
+  src: url('fonts/wantcoffee.ttf') format('TrueType'),
+}
+
+
+/*font size 10px*/
+html {
+  font-size: 10px;
+}
+
+/*header font*/
+header,h1,h2{
+  font-family: 'wantcoffee';
+  }
+
+
+/*font sizes*/
+header,h1{
+  font-size: x-large;
+}
+
+h2{
+  font-size: large;
+}
+p,ul,li{
+  font-size: medium;
+}
+
+
