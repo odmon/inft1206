@@ -71,9 +71,11 @@ html {
   font-size: 10px;
 }
 
-/*header font*/
+/*header font and letter-spacing*/
 header,h1,h2{
   font-family: 'wantcoffee';
+
+  letter-spacing: 3px;
   }
 
 
