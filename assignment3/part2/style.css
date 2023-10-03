@@ -26,8 +26,11 @@ div {
   border: 1px solid #4d0391; /*darker blueviolet color for the border*/
 
 
-  background: linear-gradient(to bottom right, rgba(255, 255,0, 0.2), rgba(255, 255,0, 0.2) 30%, rgba(255, 255, 0) 100%);
+  background: linear-gradient(to bottom right, rgba(255, 255,0, 0.2), rgba(255, 255,0, 0.2) 30%, rgba(255, 255, 0) 100%);  /*change gradient box color from transparent with opacity 0.2 to 30% and them 100%*/
 
+
+
+  box-shadow: inset 3px 3px  white,    inset -3px -3px rgba(0, 0,0, 0.2), 3px 3px rgba(0, 0,0, 0.2);  /*add box shadow white top left and black rigth bottom with opacity 0.2*/
 
 
     };
