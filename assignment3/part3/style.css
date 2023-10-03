@@ -52,7 +52,12 @@ footer {
   clear: both;
 }
 
+header{
+font-family: 'wantcoffee';
+}
+
 header, section, aside, nav, footer {
+
   padding: 20px;
 }
 
