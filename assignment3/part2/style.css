@@ -3,3 +3,12 @@ html {
 }
 
 /* Your CSS below here */
+
+div {
+ 
+  border: 3px solid ;   /* box */
+  padding: .5em;
+
+  
+  width: 200px;  /*widht 200*/
+    };
