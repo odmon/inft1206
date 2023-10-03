@@ -97,7 +97,14 @@ body {
   font-family: 'kurland';
 
   /*line height*/
-  line-height: 150%;
+  line-height: 160%;
+
+  /*  letter-spacing */
+  letter-spacing: 1px;
+
+  /*word spacing*/
+  word-spacing:1px;
+
 
   }
 
