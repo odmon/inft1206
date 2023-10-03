@@ -8,8 +8,6 @@
 }
 
 body {
-/*body font*/
-font-family: 'kurland';
   margin: 0 auto;
   min-width: 1000px;
   max-width: 1400px;
@@ -89,6 +87,22 @@ h2{
 }
 p,ul,li{
   font-size: medium;
+}
+
+
+body {
+  /*body font*/
+  font-family: 'kurland';
+
+  /*line height*/
+  line-height: 150%;
+
+  }
+
+
+  /*font sizes*/
+header{
+  text-align: center;
 }
 
 
