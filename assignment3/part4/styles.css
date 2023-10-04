@@ -69,3 +69,9 @@ nav{
   float: left; /*left*/
   margin-right: 20px;  /*add margin right balloon*/
 }
+
+/* two column layout*/
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
