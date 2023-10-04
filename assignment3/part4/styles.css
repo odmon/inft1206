@@ -63,3 +63,9 @@ nav{
   position: sticky; /*stick the nav bar when scrolling*/
   top: 0px; /*leaves nav bar at top*/
 }
+
+
+.feature {  /*class feature for the ballom*/
+  float: left; /*left*/
+  margin-right: 20px; 
+}
