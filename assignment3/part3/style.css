@@ -137,6 +137,7 @@ a:hover{
 a:focus{
   color:  rgb(243, 1, 106); /* add color to links focus*/
   text-decoration: none; /* remove underline when focus over link*/
+  outline: none; /*remove focus outline from all links */
 }
 
 a:active{
