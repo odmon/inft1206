@@ -52,14 +52,14 @@ header, footer {
 /*add font kurland*/
 @font-face {  
   font-family: 'kurland';
-  src: url('fonts/kurland.ttf') format('TrueType'),
+  src: url('fonts/kurland.ttf') format('TrueType');
 }
 
 
 /*add font ryderdirty*/
 @font-face {  
   font-family: 'wantcoffee';
-  src: url('fonts/wantcoffee.ttf') format('TrueType'),
+  src: url('fonts/wantcoffee.ttf') format('TrueType');
 }
 
 
