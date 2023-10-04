@@ -75,3 +75,10 @@ nav{
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
+
+/* two column layout with a gap 1px*/
+.photos{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1px;
+}
