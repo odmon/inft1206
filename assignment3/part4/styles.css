@@ -26,15 +26,13 @@ body {
   nav {
     background-color: #000;
     padding: .5em;
+
   }
   
   nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
-
-    display: flex; /*add flex to nav */
-    justify-content: space-between;  /*justify the nav*/
 
   }
   
@@ -53,3 +51,15 @@ body {
   .feature {
       width: 200px;
   }
+
+
+ul {
+
+  display: flex; /*add flex to nav */
+  justify-content: space-between;  /*justify the nav*/
+}
+
+nav{
+  position: sticky; /*stick the nav bar when scrolling*/
+  top: 0px; /*leaves nav bar at top*/
+}
