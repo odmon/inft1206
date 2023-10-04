@@ -118,22 +118,27 @@ h2+p{
 }
 
 
-/* add color to links */
+
 a:link{
-  color:  rgb(235, 31, 212);
+  color:  rgb(235, 31, 212); /* add color to links */
 }
 
-/* add color to links visited*/
+
 a:visited{
-  color:  rgb(105, 163, 87);
+  color:  rgb(105, 163, 87); /* add color to links visited*/
 }
 
-/* add color to links hover*/
+
 a:hover{
-  color:  rgb(106, 25, 221);
+  color:  rgb(106, 25, 221); /* add color to links hover*/
+  text-decoration: none; /* remove underline when hover over link*/
 }
 
-/* add color to links active*/
+a:focus{
+  color:  rgb(243, 1, 106); /* add color to links focus*/
+  text-decoration: none; /* remove underline when focus over link*/
+}
+
 a:active{
-  color:  rgb(23, 184, 247);
+  color:  rgb(23, 184, 247); /* add color to links active*/
 }
