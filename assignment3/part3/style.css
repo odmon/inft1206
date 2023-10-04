@@ -119,21 +119,21 @@ h2+p{
 
 
 /* add color to links */
-a.link{
+a:link{
   color:  rgb(235, 31, 212);
 }
 
 /* add color to links visited*/
-a.visited{
-  color:  rgb(95, 211, 59);
+a:visited{
+  color:  rgb(105, 163, 87);
 }
 
 /* add color to links hover*/
-a.hover{
+a:hover{
   color:  rgb(106, 25, 221);
 }
 
 /* add color to links active*/
-a.active{
+a:active{
   color:  rgb(23, 184, 247);
 }
