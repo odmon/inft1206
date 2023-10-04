@@ -142,3 +142,13 @@ a[href*="http"] {
   background-repeat: no-repeat;
   padding-left: 20px;
 }
+
+/*add line height to list and pagraphs */
+li,p {
+  line-height: 1.2;
+}
+
+/*bullet square*/
+ul {
+  list-style-type: square;
+}
