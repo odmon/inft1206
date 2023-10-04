@@ -63,46 +63,36 @@ header, footer {
 }
 
 
-/*font size 10px*/
+
 html {
-  font-size: 10px;
+  font-size: 10px;  /*font size 10px*/
 }
 
 /*header font and letter-spacing*/
 header,h1,h2{
-  font-family: 'wantcoffee';
-
-  letter-spacing: 3px;
+  font-family: 'wantcoffee'; /*change font type*/
+  letter-spacing: 3px;  /*chamge letter spacing*/
   }
 
 
 /*font sizes*/
 header,h1{
-  font-size: x-large;
+  font-size: x-large; /*change font size*/
 }
 
 h2{
-  font-size: large;
+  font-size: large; /*change font size*/
 }
 p,ul,li{
-  font-size: medium;
+  font-size: medium;  /*change font size*/
 }
 
 
 body {
-  /*body font*/
-  font-family: 'kurland';
-
-  /*line height*/
-  line-height: 160%;
-
-  /*  letter-spacing */
-  letter-spacing: 2px;
-
-  /*word spacing*/
-  word-spacing:1px;
-
-
+  font-family: 'kurland';   /*body font*/
+  line-height: 160%;   /*line height*/
+  letter-spacing: 2px;    /*  letter-spacing */
+  word-spacing:1px;   /*word spacing*/
 }
 
 
@@ -111,10 +101,9 @@ header{
   text-align: center;
 }
 
-/*add indent 20px first paragraph after each heading */
 
 h2+p{
-  text-indent: 20px;
+  text-indent: 20px;  /*add indent 20px first paragraph after each heading */
 }
 
 
