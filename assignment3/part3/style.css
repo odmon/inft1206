@@ -148,7 +148,13 @@ li,p {
   line-height: 1.2;
 }
 
-/*bullet square*/
+
 ul {
-  list-style-type: square;
+  list-style-type: square; /*bullet square*/
+
+  /*add style to navigation menu*/
+  display: block;
+  background-color: #f4f4f4;
 }
+
+
