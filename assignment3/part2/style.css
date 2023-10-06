@@ -15,9 +15,9 @@ div {
   text-align: center;  /*center horizontally*/
   padding: 50px 0;  /*center vertically*/
 
-  font-size: 1.125rem;  /*increate font size 18px = 1.125rem*/
+  font-size: 1.125rem;  /*increase font size 18px = 1.125rem*/
 
-  background-color: yellow;  /*background color */
+
   color: blueviolet;  /*font and border color*/
 
   text-shadow: 1px 1px black; /*text shadow*/
@@ -26,9 +26,17 @@ div {
   border: 1px solid #4d0391; /*darker blueviolet color for the border*/
 
 
-  background: linear-gradient(to bottom right, rgba(255, 255,0, 0.2), rgba(255, 255,0, 0.2) 30%, rgba(255, 255, 0) 100%);  /*change gradient box color from transparent with opacity 0.2 to 30% and them 100% */
+  background-color: yellow;  /*background color */
 
-
+/*
+A linear semi-transparent black gradient that goes toward the bottom right corner. Make it completely transparent at the start, grading to around 0.2 opacity by 30% along, and remaining at the same color until the end
+*/
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+  );
 
   box-shadow: inset 3px 3px  white,    inset -3px -3px rgba(0, 0,0, 0.2), 3px 3px rgba(0, 0,0, 0.2);  /*add box shadow white top left and black rigth bottom with opacity 0.2 */
 
