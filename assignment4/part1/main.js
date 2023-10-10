@@ -20,7 +20,7 @@ const insertx=['Willy the Goblin','Big Daddy','Father Christmas'];
 //array to insertx
 const inserty=['the soup kitchen','Disneyland','the White House'];
 
-//array to insertx
+//array to insertz
 const insertz=['spontaneously combusted','melted into a puddle on the sidewalk','turned into a slug and crawled away'];
 
 //3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION
