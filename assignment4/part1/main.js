@@ -29,11 +29,17 @@ randomize.addEventListener('click', result);
 
 function result() {
 
+  //create randomsillystory with defined arrays
   let sillystory=storybase; //define sillystory as storybase string
 
   let ix=randomValueFromArray(insertx); //ix is a random value from insertx
   let iy=randomValueFromArray(inserty); //ix is a random value from inserty
   let iz=randomValueFromArray(insertz); //ix is a random value from insertz
+
+  //chante text from insert xyz for random inserts
+  sillystory=sillystory.replaceAll(':insertx:',ix)  //change insertx from ix
+  sillystory=sillystory.replaceAll(':inserty:',iy)  //change insertx from iy
+  sillystory=sillystory.replaceAll(':inserty:',iz)  //change insertx from iz
 
   if(customName.value !== '') {
     const name = customName.value;
