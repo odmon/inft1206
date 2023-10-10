@@ -1,7 +1,7 @@
 //1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS
 
 const customName = document.getElementById('customname');
-const randomize = document.querySelector('.randomize');
+const randomzIteme = document.querySelector('.randomize');
 const story = document.querySelector('.story');
 
 function randomValueFromArray(array){
@@ -12,7 +12,7 @@ function randomValueFromArray(array){
 //2. RAW TEXT STRINGS
 
 //story base string
-const storybase='It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.'
+const storyText='It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.'
 
 //array to insertx
 const insertx=['Willy the Goblin','Big Daddy','Father Christmas'];
@@ -29,23 +29,23 @@ randomize.addEventListener('click', result);
 
 function result() {
 
-  //create randomsillystory with defined arrays
-  let sillystory=storybase; //define sillystory as storybase string
+  //create randomnewStory with defined arrays
+  let newStory=storyText; //define newStory as storybase string
 
-  let ix=randomValueFromArray(insertx); //ix is a random value from insertx
-  let iy=randomValueFromArray(inserty); //ix is a random value from inserty
-  let iz=randomValueFromArray(insertz); //ix is a random value from insertz
+  let xItem=randomValueFromArray(insertx); //xItem is a random value from insertx
+  let yItem=randomValueFromArray(inserty); //yItem is a random value from inserty
+  let zItem=randomValueFromArray(insertz); //zItem is a random value from insertz
 
   //chante text from insert xyz for random inserts
-  sillystory=sillystory.replaceAll(':insertx:',ix)  //change insertx from ix
-  sillystory=sillystory.replaceAll(':inserty:',iy)  //change insertx from iy
-  sillystory=sillystory.replaceAll(':inserty:',iz)  //change insertx from iz
+  newStory=newStory.replaceAll(':insertx:',xItem)  //change insertx from xItem
+  newStory=newStory.replaceAll(':inserty:',yItem)  //change insertx from yItem
+  newStory=newStory.replaceAll(':inserty:',zItem)  //change insertx from zItem
 
   if(customName.value !== '') {
     const name = customName.value;
 
     
-    sillystory=sillystory.replaceAll('Bob',name)  //change Bob to input name in the story
+    newStory=newStory.replaceAll('Bob',name)  //change Bob to input name in the story
 
   }
 
