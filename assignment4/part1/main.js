@@ -45,7 +45,7 @@ function result() {
     const name = customName.value;
 
     
-    newStory=newStory.replaceAll('Bob',name)  //change Bob to input name in the story
+    newStory=newStory.replaceAll('Bob',name); //change Bob to input name in the story
 
   }
 
