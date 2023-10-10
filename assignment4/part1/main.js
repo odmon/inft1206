@@ -44,6 +44,9 @@ function result() {
   if(customName.value !== '') {
     const name = customName.value;
 
+    
+    sillystory=sillystory.replaceAll('Bob',name)  //change Bob to input name in the story
+
   }
 
   if(document.getElementById("uk").checked) {
