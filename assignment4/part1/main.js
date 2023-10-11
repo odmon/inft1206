@@ -1,7 +1,9 @@
+//document.querySelector("html").style.backgroundColor = "red";
+
 //1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS
 
 const customName = document.getElementById('customname');
-const randomzIteme = document.querySelector('.randomize');
+const randomize = document.querySelector('.randomize');
 const story = document.querySelector('.story');
 
 function randomValueFromArray(array){
@@ -24,6 +26,7 @@ const inserty=['the soup kitchen','Disneyland','the White House'];
 const insertz=['spontaneously combusted','melted into a puddle on the sidewalk','turned into a slug and crawled away'];
 
 //3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION
+
 
 randomize.addEventListener('click', result);
 
