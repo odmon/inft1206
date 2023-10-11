@@ -42,7 +42,7 @@ function result() {
   //chante text from insert xyz for random inserts
   newStory=newStory.replaceAll(':insertx:',xItem);  //change insertx from xItem
   newStory=newStory.replaceAll(':inserty:',yItem); //change insertx from yItem
-  newStory=newStory.replaceAll(':inserty:',zItem);  //change insertx from zItem
+  newStory=newStory.replaceAll(':insertz:',zItem);  //change insertx from zItem
 
   if(customName.value !== '') {
     const name = customName.value;
