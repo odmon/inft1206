@@ -54,10 +54,10 @@ function result() {
 
   if(document.getElementById("uk").checked) {
     const weightstone=Math.round(300*0.0714286); //const to calculate stones
-    const weight = weightstone.toString + ' stone';  //1 pound (lb) is equal to 0.0714286 stones (st).
+    const weight = weightstone + ' stone';  //1 pound (lb) is equal to 0.0714286 stones (st).
     
     const temperaturecelsius=Math.round((94-32)*5/9);  //const to calculate celsius
-    const temperature =  temperaturecelsius.toString + ' centigrade';  //emperature in degrees Celsius (°C) = (Temperature in degrees Fahrenheit (°F) - 32) * 5/9
+    const temperature =  temperaturecelsius + ' centigrade';  //emperature in degrees Celsius (°C) = (Temperature in degrees Fahrenheit (°F) - 32) * 5/9
 
     newStory=newStory.replaceAll('300 pounds',weight ); //change weight
     newStory=newStory.replaceAll('94 fahrenheit',temperature);  //change temperature
