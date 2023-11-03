@@ -12,9 +12,14 @@ const al=['eye','rock','flower','hyroglific','buttlerfly']; /*define al as a con
 
 /* Looping through images */
 
+for (let i = 0; i < 5; i++)
+{
 const newImage = document.createElement('img');
-newImage.setAttribute('src', xxx);
-newImage.setAttribute('alt', xxx);
+newImage.setAttribute('src', './images/' + im[i]); /*list images located at /images/ folder */
+newImage.setAttribute('alt', al[i]);/*list alt*/
 thumbBar.appendChild(newImage);
 
+newImage.addEventListener('click', ii=> {displayedImage.src=ii.target.src; displayedImage.alt=ii.target.alt;});  /*add event click to show image */
+
+}
 /* Wiring up the Darken/Lighten button */
