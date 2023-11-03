@@ -61,6 +61,22 @@ update() {
   this.y += this.velY;
 }
 
+
+//collision detection
+collisionDetect() {
+  for (const ball of balls) {
+    if (this !== ball) {
+      const dx = this.x - ball.x;
+      const dy = this.y - ball.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < this.size + ball.size) {
+        ball.color = this.color = randomRGB();
+      }
+    }
+  }
+}
+
 }
 
 
@@ -93,6 +109,7 @@ function loop() {
   for (const ball of balls) {
     ball.draw();
     ball.update();
+    ball.collisionDetect(); //add collisiondetection
   }
 
   requestAnimationFrame(loop);
