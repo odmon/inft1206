@@ -30,25 +30,14 @@ class Ball {
     this.color = color;
     this.size = size;
   }
-}
 
-//draw method to the ball class
+  //draw method to the ball class
 draw() {
   ctx.beginPath();
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
   ctx.fill();
 }
-
-//create a new ball instance
-const testBall = new Ball(50, 100, 4, 4, "blue", 10);
-
-//calling balls
-
-testBall.x;
-testBall.size;
-testBall.color;
-testBall.draw();
 
 //update ball's data
 update() {
@@ -71,3 +60,44 @@ update() {
   this.x += this.velX;
   this.y += this.velY;
 }
+
+}
+
+
+
+
+//store balls and then populate
+const balls = [];
+
+while (balls.length < 25) {
+  const size = random(10, 20);
+  const ball = new Ball(
+    // ball position always drawn at least one ball width
+    // away from the edge of the canvas, to avoid drawing errors
+    random(0 + size, width - size),
+    random(0 + size, height - size),
+    random(-7, 7),
+    random(-7, 7),
+    randomRGB(),
+    size,
+  );
+
+  balls.push(ball);
+}
+
+//loop
+function loop() {
+  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.fillRect(0, 0, width, height);
+
+  for (const ball of balls) {
+    ball.draw();
+    ball.update();
+  }
+
+  requestAnimationFrame(loop);
+}
+
+
+//call loop
+loop();
