@@ -62,10 +62,10 @@ update() {
 }
 
 
-//collision detection
+//collision detection - small update
 collisionDetect() {
   for (const ball of balls) {
-    if (this !== ball) {
+    if (!(this === ball) && ball.exists) {
       const dx = this.x - ball.x;
       const dy = this.y - ball.y;
       const distance = Math.sqrt(dx * dx + dy * dy);
@@ -76,7 +76,6 @@ collisionDetect() {
     }
   }
 }
-
 }
 
 
