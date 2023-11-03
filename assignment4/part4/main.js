@@ -62,7 +62,7 @@ update() {
 }
 
 
-//collision detection - update
+//collision detection + update
 collisionDetect() {
   for (const ball of balls) {
     if (!(this === ball) && ball.exists) {
@@ -75,6 +75,8 @@ collisionDetect() {
       }
     }
   }
+}
+
 }
 
 
