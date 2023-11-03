@@ -12,7 +12,7 @@ const al=['eye','rock','flower','hyroglific','buttlerfly']; /*define al as a con
 
 /* Looping through images */
 
-for (let i = 0; i < 5; i++)
+for (let i = 0; i < 5; i++)  /*loop for 5 images */
 {
 const newImage = document.createElement('img');
 newImage.setAttribute('src', './images/' + im[i]); /*list images located at /images/ folder */
@@ -23,3 +23,20 @@ newImage.addEventListener('click', ii=> {displayedImage.src=ii.target.src; displ
 
 }
 /* Wiring up the Darken/Lighten button */
+btn.addEventListener('click', () => 
+{
+  const btnClass = btn.getAttribute('class');
+  if (btnClass === 'light')  /*if button class is light then lighten image */
+{
+    btn.setAttribute('class','dark');  /*change class to dark */
+    btn.textContent = 'Darken';
+    overlay.style.backgroundColor = 'rgba(0,0,0,0)';  /*remove dark background color  */
+
+ } 
+else  /*if button class is dark then lighten image */
+{
+    btn.setAttribute('class','light');  /*change class to light*/
+    btn.textContent = 'Lighten';
+    overlay.style.backgroundColor = 'rgba(0,0,0,0.10)';  /*change background color darker */
+}
+});
