@@ -71,14 +71,13 @@ collisionDetect() {
       const distance = Math.sqrt(dx * dx + dy * dy);
 
       if (distance < this.size + ball.size) {
-        ball.color = this.color = randomRGB();
+        ball.color = this.color = randomRGB();  //collisiion detected change color
       }
     }
   }
 }
 
 }
-
 
 
 //store balls and then populate
@@ -100,6 +99,31 @@ while (balls.length < 25) {
   balls.push(ball);
 }
 
+
+class eo extends Ball{     //class eo aka evil circle 
+
+//  constructor(x, y, velX, velY, color, size) {
+//    this.x = 20;          //eo x position 20 
+//    this.y = 20;          //eo y position 20
+//    this.velX = 5;        //eo velx 5
+//    this.velY = 5;        //eo vely 5
+//    this.color = "white";  //eo color to white
+//    this.size = 20;       //eo size 20
+//  }
+
+draw() {   //draw eo - evil circle
+  ctx.beginPath();
+  ctx.strokeStyle = this.color;
+  ctx.lineWidth = 3;
+  ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+  ctx.stroke();
+}
+
+}  
+
+
+const eb = new eo(100,100,5,5,"white",20);   //create eb - evil ball 
+
 //loop
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
@@ -110,6 +134,8 @@ function loop() {
     ball.update();
     ball.collisionDetect(); //add collisiondetection
   }
+
+  eb.draw();  //draw eb - evil ball
 
   requestAnimationFrame(loop);
 }
