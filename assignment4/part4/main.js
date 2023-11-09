@@ -1,5 +1,9 @@
 // setup canvas
 
+const pballcount = document.querySelector('p');  //paragragh element to keep count
+const maxballs=25;  //define constant with max balls  
+var count = maxballs;  //count of balls
+
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
@@ -91,6 +95,11 @@ collisionDetect() {
   if (distance < this.size + eb.size) {
     
     this.color=randomRGB();
+
+    return(true);
+  }
+  else{
+    return(false);
   }
   
 }
@@ -102,7 +111,7 @@ collisionDetect() {
 //store balls and then populate
 const balls = [];
 
-while (balls.length < 25) {
+while (balls.length < maxballs) {
   const size = random(10, 20);
   const ball = new Ball(
     // ball position always drawn at least one ball width
