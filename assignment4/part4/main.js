@@ -29,6 +29,25 @@ class Ball {
     this.velY = velY;
     this.color = color;
     this.size = size;
+/////// add keydown event to move the eo
+    window.addEventListener('keydown', (e) => {
+      switch(e.key) {
+        case 'a':
+          this.x -= this.velX;
+          break;
+        case 'd':
+          this.x += this.velX;
+          break;
+        case 'w':
+          this.y -= this.velY;
+          break;
+        case 's':
+          this.y += this.velY;
+          break;
+      }
+    });
+
+//////////////////////
   }
 
   //draw method to the ball class
@@ -103,15 +122,32 @@ while (balls.length < 25) {
 class eo extends Ball{     //class eo aka evil circle 
 
 //  constructor(x, y, velX, velY, color, size) {
-//    this.x = 20;          //eo x position 20 
-//    this.y = 20;          //eo y position 20
-//    this.velX = 5;        //eo velx 5
-//    this.velY = 5;        //eo vely 5
-//    this.color = "white";  //eo color to white
-//    this.size = 20;       //eo size 20
-//  }
+//    this.x = x;          //eo x position 100
+//    this.y = y;          //eo y position 100
+//    this.velX = velX;        //eo velx 5
+//    this.velY = velY;        //eo vely 5
+//    this.color = color;  //eo color to white
+//  this.size = size;       //eo size 10
+  
+ // window.addEventListener("keydown", (e) => {
+ //   switch (e.key) {
+ //     case "a":
+ //       this.x -= this.velX;
+ //       break;
+ //     case "d":
+ //       this.x += this.velX;
+ //       break;
+ //     case "w":
+ //       this.y -= this.velY;
+ //       break;
+ //     case "s":
+ //       this.y += this.velY;
+ //       break;
+ //   }
+ // });
+ // }
 
-draw() {   //draw eo - evil circle
+  draw() {   //draw eo - evil circle
   ctx.beginPath();
   ctx.strokeStyle = this.color;
   ctx.lineWidth = 3;
@@ -122,7 +158,7 @@ draw() {   //draw eo - evil circle
 }  
 
 
-const eb = new eo(100,100,5,5,"white",20);   //create eb - evil ball 
+const eb = new eo(width/2,height/2,5,5,"white",10);   //create eb - evil ball 
 
 //loop
 function loop() {
