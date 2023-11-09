@@ -83,18 +83,18 @@ update() {
 
 //collision detection + update
 collisionDetect() {
-  for (const ball of balls) {
-    if (!(this === ball) && ball.exists) {
-      const dx = this.x - ball.x;
-      const dy = this.y - ball.y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
 
-      if (distance < this.size + ball.size) {
-        ball.color = this.color = randomRGB();  //collisiion detected change color
-      }
-    }
+  const dx = this.x - eb.x;
+  const dy = this.y - eb.y;
+  const distance = Math.sqrt(dx * dx + dy * dy);
+
+  if (distance < this.size + eb.size) {
+    
+    this.color=randomRGB();
   }
+  
 }
+
 
 }
 
@@ -120,32 +120,6 @@ while (balls.length < 25) {
 
 
 class eo extends Ball{     //class eo aka evil circle 
-
-//  constructor(x, y, velX, velY, color, size) {
-//    this.x = x;          //eo x position 100
-//    this.y = y;          //eo y position 100
-//    this.velX = velX;        //eo velx 5
-//    this.velY = velY;        //eo vely 5
-//    this.color = color;  //eo color to white
-//  this.size = size;       //eo size 10
-  
- // window.addEventListener("keydown", (e) => {
- //   switch (e.key) {
- //     case "a":
- //       this.x -= this.velX;
- //       break;
- //     case "d":
- //       this.x += this.velX;
- //       break;
- //     case "w":
- //       this.y -= this.velY;
- //       break;
- //     case "s":
- //       this.y += this.velY;
- //       break;
- //   }
- // });
- // }
 
   draw() {   //draw eo - evil circle
   ctx.beginPath();
