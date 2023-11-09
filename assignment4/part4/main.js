@@ -37,16 +37,16 @@ class Ball {
     window.addEventListener('keydown', (e) => {
       switch(e.key) {
         case 'a':
-          this.x -= this.velX;
+          eb.x -= eb.velX;
           break;
         case 'd':
-          this.x += this.velX;
+          eb.x += eb.velX;
           break;
         case 'w':
-          this.y -= this.velY;
+          eb.y -= eb.velY;
           break;
         case 's':
-          this.y += this.velY;
+          eb.y += eb.velY;
           break;
       }
     });
@@ -142,7 +142,7 @@ class eo extends Ball{     //class eo aka evil circle
 }  
 
 
-const eb = new eo(width/2,height/2,5,5,"white",10);   //create eb - evil ball 
+const eb = new eo(width/2,height/2,1,1,"white",10);   //create eb - evil ball 
 
 //loop
 function loop() {
