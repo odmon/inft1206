@@ -95,11 +95,12 @@ collisionDetect() {
   if (distance < this.size + eb.size) {
     
     this.color=randomRGB();
+    this.size=0;  //change size to 0 to remove ball
+    return(true);  //true when hit
 
-    return(true);
   }
   else{
-    return(false);
+    return(false);  //return false if there is not hit
   }
   
 }
@@ -149,9 +150,17 @@ function loop() {
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {
-    ball.draw();
-    ball.update();
-    ball.collisionDetect(); //add collisiondetection
+
+    if(ball.size!=0) { //ball exist if size is different from 0
+      ball.draw();
+      ball.update();
+      if (ball.collisionDetect()){ //add collisiondetection
+        count--; //decrease counter
+        pballcount.textContent='ball count: ' + count; //show text with ball count
+      
+     }
+
+    }
   }
 
   eb.draw();  //draw eb - evil ball
