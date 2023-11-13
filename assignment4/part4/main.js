@@ -23,91 +23,153 @@ function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 
+class Shape {
 
-//class ball
-class Ball {
-  constructor(x, y, velX, velY, color, size) {
+  constructor(x, y, velX, velY) {
     this.x = x;
     this.y = y;
     this.velX = velX;
     this.velY = velY;
+  }
+
+}
+
+class Ball extends Shape {
+
+  constructor(x, y, velX, velY, color, size) {
+    super(x, y, velX, velY);
+
     this.color = color;
     this.size = size;
-/////// add keydown event to move the eo
+  }
+
+
+  draw() {
+    ctx.beginPath();
+    ctx.fillStyle = this.color;
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    ctx.fill();
+  }
+
+
+
+  //update ball's data
+  update() {
+    if ((this.x + this.size) >= width) {
+      this.velX = -(this.velX);
+    }
+
+    if ((this.x - this.size) <= 0) {
+      this.velX = -(this.velX);
+    }
+
+    if ((this.y + this.size) >= height) {
+      this.velY = -(this.velY);
+    }
+
+    if ((this.y - this.size) <= 0) {
+      this.velY = -(this.velY);
+    }
+
+    this.x += this.velX;
+    this.y += this.velY;
+  }
+
+
+  //collision detection + update
+  collisionDetect() {
+
+    const dx = this.x - EvilBall.x;
+    const dy = this.y - EvilBall.y;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+
+    if (distance < this.size + EvilBall.size) {
+    
+      this.color=randomRGB();
+      this.size=0;  //change size to 0 to remove ball
+      return(true);  //true when hit
+
+    }
+    else{
+      return(false);  //return false if there is not hit
+    }
+  
+  }
+
+}
+
+//class evilcircle
+
+
+class EvilCircle extends Shape {
+
+  constructor(x, y) {
+    super(x, y, 20, 20);
+
+    this.color = "white";
+    this.size = 10;
+
     window.addEventListener('keydown', (e) => {
       switch(e.key) {
         case 'a':
-          eb.x -= eb.velX;
+          this.x -= this.velX;
           break;
         case 'd':
-          eb.x += eb.velX;
+          this.x += this.velX;
           break;
         case 'w':
-          eb.y -= eb.velY;
+          this.y -= this.velY;
           break;
         case 's':
-          eb.y += eb.velY;
+          this.y += this.velY;
           break;
       }
     });
-
-//////////////////////
   }
 
-  //draw method to the ball class
-draw() {
-  ctx.beginPath();
-  ctx.fillStyle = this.color;
-  ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-  ctx.fill();
-}
-
-//update ball's data
-update() {
-  if ((this.x + this.size) >= width) {
-    this.velX = -(this.velX);
+  draw() {
+    ctx.beginPath();
+    ctx.strokeStyle = this.color;
+    ctx.lineWidth = 3;
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    ctx.stroke();
   }
 
-  if ((this.x - this.size) <= 0) {
-    this.velX = -(this.velX);
+  checkBounds() {
+    if ((this.x + this.size) >= width) {
+      this.x -= this.size;
+    }
+
+    if ((this.x - this.size) <= 0) {
+      this.x += this.size;
+    }
+
+    if ((this.y + this.size) >= height) {
+      this.y -= this.size;
+    }
+
+    if ((this.y - this.size) <= 0) {
+      this.y += this.size;
+    }
   }
 
-  if ((this.y + this.size) >= height) {
-    this.velY = -(this.velY);
+  collisionDetect() {
+    for (const ball of balls) {
+      if (ball.exists) {
+        const dx = this.x - ball.x;
+        const dy = this.y - ball.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < this.size + ball.size) {
+          ball.exists = false;
+          count--;
+          para.textContent = 'Ball count: ' + count;
+        }
+      }
+    }
   }
-
-  if ((this.y - this.size) <= 0) {
-    this.velY = -(this.velY);
-  }
-
-  this.x += this.velX;
-  this.y += this.velY;
-}
-
-
-//collision detection + update
-collisionDetect() {
-
-  const dx = this.x - eb.x;
-  const dy = this.y - eb.y;
-  const distance = Math.sqrt(dx * dx + dy * dy);
-
-  if (distance < this.size + eb.size) {
-    
-    this.color=randomRGB();
-    this.size=0;  //change size to 0 to remove ball
-    return(true);  //true when hit
-
-  }
-  else{
-    return(false);  //return false if there is not hit
-  }
-  
-}
-
 
 }
-
 
 //store balls and then populate
 const balls = [];
@@ -129,20 +191,8 @@ while (balls.length < maxballs) {
 }
 
 
-class eo extends Ball{     //class eo aka evil circle 
 
-  draw() {   //draw eo - evil circle
-  ctx.beginPath();
-  ctx.strokeStyle = this.color;
-  ctx.lineWidth = 3;
-  ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-  ctx.stroke();
-}
-
-}  
-
-
-const eb = new eo(width/2,height/2,1,1,"white",10);   //create eb - evil ball 
+const EvilBall = new EvilCircle(width/2,height/2);   //create EvilBall - evil ball 
 
 //loop
 function loop() {
@@ -163,7 +213,7 @@ function loop() {
     }
   }
 
-  eb.draw();  //draw eb - evil ball
+  EvilBall.draw();  //draw EvilBall - evil ball
 
   requestAnimationFrame(loop);
 }
