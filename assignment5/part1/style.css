@@ -248,3 +248,23 @@ audio {
 .comment-container li p:nth-child(2) {
   flex: 5;
 }
+
+/*headers style*/
+
+h1 {
+  font-size: 5rem;
+  color: black;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h2 {
+  font-size: 4rem;
+  color: black;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h3 {
+  font-size: 3rem;
+  color: black;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
